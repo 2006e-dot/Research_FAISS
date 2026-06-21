@@ -1,0 +1,187 @@
+Dataset Size : 16,893 headlines
+
+Class Distribution:
+Positive : 6205
+Neutral  : 5621
+Negative : 5067
+
+
+FAISS Accuracy  : 0.6987
+FAISS BASELINE
+Accuracy: 0.6987
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+    negative       0.63      0.73      0.68      1014
+     neutral       0.78      0.63      0.70      1124
+    positive       0.70      0.74      0.72      1241
+
+    accuracy                           0.70      3379
+   macro avg       0.70      0.70      0.70      3379
+weighted avg       0.71      0.70      0.70      3379
+
+
+Confusion Matrix:
+
+[[737  97 180]
+ [211 708 205]
+ [219 106 916]] 
+
+
+BM25 Accuracy   : 0.7257
+             precision    recall  f1-score   support
+
+    negative       0.69      0.71      0.70      1014
+     neutral       0.74      0.72      0.73      1124
+    positive       0.74      0.75      0.75      1241
+
+    accuracy                           0.73      3379
+   macro avg       0.72      0.72      0.72      3379
+weighted avg       0.73      0.73      0.73      3379
+Confusion Matrix:
+
+[[715 140 159]
+ [153 805 166]
+ [162 147 932]] 
+
+
+Hybrid Accuracy : 0.7413
+Accuracy:0.7413
+
+ Classification_Report:
+
+              precision    recall  f1-score   support
+
+    negative       0.72      0.73      0.72      1014
+     neutral       0.77      0.71      0.74      1124
+    positive       0.74      0.78      0.76      1241
+
+    accuracy                           0.74      3379
+   macro avg       0.74      0.74      0.74      3379
+weighted avg       0.74      0.74      0.74      3379
+
+
+ Confusion_Matrix:
+
+[[740 109 165]
+ [145 798 181]
+ [148 126 967]] 
+
+FIVE FOLD CROSS VALIDATION ON HYBRID:
+==================================================
+FOLD 1
+==================================================
+Vectors Stored: 13514
+100%|██████████| 3379/3379 [06:22<00:00,  8.82it/s]
+Fold Accuracy: 0.7437
+              precision    recall  f1-score   support
+
+    negative       0.72      0.74      0.73      1013
+     neutral       0.77      0.70      0.74      1125
+    positive       0.74      0.78      0.76      1241
+
+    accuracy                           0.74      3379
+   macro avg       0.74      0.74      0.74      3379
+weighted avg       0.74      0.74      0.74      3379
+
+==================================================
+FOLD 2
+==================================================
+Vectors Stored: 13514
+100%|██████████| 3379/3379 [07:21<00:00,  7.66it/s]
+Fold Accuracy: 0.7470
+              precision    recall  f1-score   support
+
+    negative       0.71      0.74      0.73      1014
+     neutral       0.77      0.73      0.75      1124
+    positive       0.76      0.77      0.76      1241
+
+    accuracy                           0.75      3379
+   macro avg       0.75      0.75      0.75      3379
+weighted avg       0.75      0.75      0.75      3379
+
+
+==================================================
+FOLD 3
+==================================================
+Vectors Stored: 13514
+100%|██████████| 3379/3379 [07:14<00:00,  7.78it/s]
+Fold Accuracy: 0.7479
+              precision    recall  f1-score   support
+
+    negative       0.72      0.72      0.72      1014
+     neutral       0.80      0.70      0.75      1124
+    positive       0.73      0.81      0.77      1241
+
+    accuracy                           0.75      3379
+   macro avg       0.75      0.75      0.75      3379
+weighted avg       0.75      0.75      0.75      3379
+
+
+==================================================
+FOLD 4
+==================================================
+Vectors Stored: 13515
+100%|██████████| 3378/3378 [07:41<00:00,  7.32it/s]
+Fold Accuracy: 0.7422
+              precision    recall  f1-score   support
+
+    negative       0.75      0.72      0.73      1013
+     neutral       0.75      0.71      0.73      1124
+    positive       0.74      0.79      0.76      1241
+
+    accuracy                           0.74      3378
+   macro avg       0.74      0.74      0.74      3378
+weighted avg       0.74      0.74      0.74      3378
+
+
+==================================================
+FOLD 5
+==================================================
+Vectors Stored: 13515
+100%|██████████| 3378/3378 [07:56<00:00,  7.09it/s]Fold Accuracy: 0.7522
+              precision    recall  f1-score   support
+
+    negative       0.74      0.73      0.74      1013
+     neutral       0.77      0.74      0.76      1124
+    positive       0.74      0.78      0.76      1241
+
+    accuracy                           0.75      3378
+   macro avg       0.75      0.75      0.75      3378
+weighted avg       0.75      0.75      0.75      3378
+
+5 FOLD CROSS VALIDATION
+Fold 1: 0.7437
+Fold 2: 0.7470
+Fold 3: 0.7479
+Fold 4: 0.7422
+Fold 5: 0.7522
+
+Mean Accuracy: 0.7466
+Std Dev: 0.0035
+
+HYBRID + RRF:
+
+Accuracy:0.7339
+
+ Classification_Report:
+
+              precision    recall  f1-score   support
+
+    negative       0.71      0.72      0.71      1014
+     neutral       0.76      0.70      0.73      1124
+    positive       0.74      0.77      0.75      1241
+
+    accuracy                           0.73      3379
+   macro avg       0.73      0.73      0.73      3379
+weighted avg       0.73      0.73      0.73      3379
+
+
+ Confusion_Matrix:
+
+[[732 121 161]
+ [152 788 184]
+ [151 130 960]]
+
